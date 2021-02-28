@@ -1,0 +1,9 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": { "requireConfigFile": false },
+  "plugins": ["@babel"],
+  "extends": ["eslint:recommended"],
+  "env": { "browser": true, "es2021": true },
+  "rules": { "no-unused-vars": "warn" },
+  "ignorePatterns": ["webpack.config.js", "dist/*", "node_modules/*"]
+}
