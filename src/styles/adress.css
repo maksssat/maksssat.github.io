@@ -1,0 +1,7 @@
+address {
+  padding: 0 var(--padding);
+}
+
+address a:not(:first-of-type) {
+  margin-left: 15px;
+}

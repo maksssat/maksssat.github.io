@@ -23,7 +23,7 @@ module.exports = {
 
   output: {
     filename: "[name].[contenthash].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     clean: true,
   },
 
@@ -133,7 +133,6 @@ module.exports = {
                 {
                   useBuiltIns: "usage",
                   corejs: 3,
-                  shippedProposals: true,
                 },
               ],
             ],
@@ -155,5 +154,6 @@ module.exports = {
     contentBase: path.join(__dirname, "src"),
     open: true,
     hot: true,
+    compress: true,
   },
 };
