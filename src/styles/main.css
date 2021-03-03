@@ -3,7 +3,7 @@
 @import "~normalize.css";
 
 :root {
-  --text-color: rgb(0, 0, 0);
+  --text-color: rgb(58, 58, 58);
   --bg-color: white;
   --padding: 20px;
 }
@@ -45,7 +45,7 @@ h1 {
 
 h2 {
   color: var(--text-color, black);
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 300;
   font-style: normal;
 }
