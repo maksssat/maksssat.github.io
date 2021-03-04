@@ -1,1 +1,1 @@
-# maksssat.github.io
+https://maksssat.github.io/
