@@ -21,7 +21,7 @@
   object-position: center;
   width: 100%;
   height: 100%;
-  filter: blur(3px);
+  filter: blur(2px);
 }
 
 .project-card-text {
@@ -35,27 +35,30 @@
   width: 100%;
   height: 100%;
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.377);
+  background-color: rgba(var(--text-bg), 0.473);
   font-size: 37px;
   font-weight: 300;
   text-transform: uppercase;
 }
 
 .project-card:hover .project-card-text {
-  background-color: rgba(226, 226, 226, 0.788);
+  background-color: rgba(var(--text-bg), 0.788);
 }
 
 .project-card-text p {
+  padding: 5px;
   align-self: flex-start;
+  /* background-color: rgb(252, 255, 77); */
 }
 
 .tag {
   padding: 1px 10px;
-  color: white;
-  font-size: 14px;
+  color: var(--bg-color);
+  font-size: 15px;
   font-weight: 300;
   background-color: var(--text-color, black);
   border-radius: 10px;
+  vertical-align: middle;
 }
 
 .tag:not(:first-child) {

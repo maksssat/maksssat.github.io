@@ -1,17 +1,32 @@
 @import "adress.css";
 @import "projects.css";
+@import "switcher.css";
 @import "~normalize.css";
 
 :root {
   --text-color: rgb(58, 58, 58);
+  --text-bg: 255, 255, 255;
   --bg-color: white;
   --padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --padding: 5px;
+  }
 }
 
 html {
   height: 100%;
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.dark {
+  --text-color: rgb(216, 216, 216);
+  --bg-color: rgb(58, 58, 58);
+  --text-bg: 0, 0, 0;
 }
 
 *,
@@ -45,7 +60,7 @@ h1 {
 
 h2 {
   color: var(--text-color, black);
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 300;
   font-style: normal;
 }
