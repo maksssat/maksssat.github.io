@@ -24,7 +24,7 @@ html {
 }
 
 .dark {
-  --text-color: rgb(216, 216, 216);
+  --text-color: rgb(224, 223, 223);
   --bg-color: rgb(58, 58, 58);
   --text-bg: 0, 0, 0;
 }
