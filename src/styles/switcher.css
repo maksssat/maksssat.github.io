@@ -61,7 +61,7 @@
 }
 
 input:checked + .slider {
-  background-color: rgb(252, 255, 77);
+  background-color: var(--text-bg);
 }
 
 input:focus + .slider {

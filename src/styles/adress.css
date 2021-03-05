@@ -1,7 +1,12 @@
 address {
   padding: 0 var(--padding);
+  padding-bottom: 30px;
 }
 
 address a:not(:first-of-type) {
   margin-left: 15px;
+}
+
+.contacts-ref {
+  text-align: center;
 }

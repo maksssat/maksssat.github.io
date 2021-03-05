@@ -5,9 +5,11 @@
 
 :root {
   --text-color: rgb(58, 58, 58);
-  --text-bg: 255, 255, 255;
+  --text-bg: rgb(252, 255, 77);
+  --card-bg: 255, 255, 255;
   --bg-color: white;
   --padding: 20px;
+  --card-border: rgb(78, 78, 78);
 }
 
 @media only screen and (max-width: 600px) {
@@ -26,7 +28,8 @@ html {
 .dark {
   --text-color: rgb(224, 223, 223);
   --bg-color: rgb(58, 58, 58);
-  --text-bg: 0, 0, 0;
+  --card-bg: 0, 0, 0;
+  --card-border: rgb(201, 201, 201);
 }
 
 *,
@@ -56,6 +59,7 @@ h1 {
   color: var(--text-color, black);
   font-size: 50px;
   font-weight: 400;
+  letter-spacing: 4px;
 }
 
 h2 {
