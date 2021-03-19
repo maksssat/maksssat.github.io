@@ -12,7 +12,7 @@
   --card-border: rgb(78, 78, 78);
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   :root {
     --padding: 5px;
   }
@@ -22,7 +22,6 @@ html {
   height: 100%;
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
-  scroll-behavior: smooth;
 }
 
 .dark {
