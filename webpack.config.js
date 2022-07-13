@@ -1,6 +1,5 @@
 const path = require("path");
-const isProductionMode =
-  process.argv[process.argv.indexOf("--mode") + 1] === "production";
+const isProductionMode = process.argv[process.argv.indexOf("--mode") + 1] === "production";
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -29,27 +28,6 @@ module.exports = {
 
   plugins: [
     new ESLintPlugin(),
-    new ImageMinimizerPlugin({
-      minimizerOptions: {
-        // Lossless optimization with custom option
-        // Feel free to experiment with options for better result for you
-        plugins: [
-          ["gifsicle", { interlaced: true }],
-          ["jpegtran", { progressive: true }],
-          ["optipng", { optimizationLevel: 5 }],
-          [
-            "svgo",
-            {
-              plugins: [
-                {
-                  removeViewBox: false,
-                },
-              ],
-            },
-          ],
-        ],
-      },
-    }),
     new HTMLWebpackPlugin({
       template: "./index.html",
       inject: "body",
@@ -136,9 +114,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset",
         generator: {
-          filename: isProductionMode
-            ? "images/[name].[contenthash][ext]"
-            : "images/[name][ext]",
+          filename: isProductionMode ? "images/[name].[contenthash][ext]" : "images/[name][ext]",
         },
       },
 
@@ -153,7 +129,7 @@ module.exports = {
                 "@babel/preset-env",
                 {
                   useBuiltIns: "usage",
-                  corejs: { version: "3.9", proposals: true },
+                  corejs: { version: "3.23", proposals: true },
                 },
               ],
             ],
@@ -164,7 +140,18 @@ module.exports = {
   },
 
   optimization: {
-    minimizer: [`...`, new CssMinimizerPlugin()],
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin(),
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.squooshMinify,
+          options: {
+            // Your options for `squoosh`
+          },
+        },
+      }),
+    ],
     splitChunks: {
       chunks: "all",
     },
