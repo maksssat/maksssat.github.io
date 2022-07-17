@@ -5,5 +5,5 @@
   "extends": ["eslint:recommended"],
   "env": { "browser": true, "es2021": true },
   "rules": { "no-unused-vars": "warn" },
-  "ignorePatterns": ["webpack.config.js", "dist/*", "node_modules/*"]
+  "ignorePatterns": ["webpack.*.js", "dist/*", "node_modules/*", "postcss.config.js"]
 }
