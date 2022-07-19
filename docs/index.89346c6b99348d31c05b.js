@@ -1,1 +1,0 @@
-!function(){"use strict";document.querySelector("#theme-switcher").addEventListener("change",(function(){document.querySelector("html").classList.toggle("dark")}))}();

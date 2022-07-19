@@ -1,0 +1,2 @@
+!function(){"use strict";document.querySelector("#theme-switcher").addEventListener("change",(function(){document.querySelector("html").classList.toggle("dark")}))}();
+//# sourceMappingURL=index.e4528782823e6b51c496.js.map

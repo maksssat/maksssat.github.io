@@ -1,4 +1,4 @@
-import "/styles/main.css";
+import "./styles/main.css";
 
 const switcher = document.querySelector("#theme-switcher");
 
