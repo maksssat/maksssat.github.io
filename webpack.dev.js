@@ -10,13 +10,22 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+            },
+          },
+          "postcss-loader",
+        ],
       },
     ],
   },
 
   devServer: {
-    static: path.join(__dirname, "docs"),
+    static: path.join(__dirname, "src"),
     open: true,
   },
 });
